@@ -1,0 +1,79 @@
+html{
+    background: url(img/backround.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1{
+    font-size: 40px;
+    color: brown;
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    text-shadow: 6px 6px 6px pink;
+}
+.centered-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.searchButton, #submit-btn{
+    font-size: 30px;
+    color: rgb(255, 0, 106);
+    background-color: pink;
+    border-radius: 20px;
+    border: plum solid 4px;
+    margin-right: 20px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input-field{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem ;
+    
+}
+
+#label-text{
+    font-size: xx-large;
+    color: greenyellow;
+    border: .2rem solid;
+    background-color: rosybrown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: clamp(200px, 50%, 600px);
+}
+
+#mushroomName{
+    font-size: xx-large;
+    border-radius: 2rem;
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: clamp(200px, 50%, 600px);
+}
+#img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#not-found{
+    font-size: larger;
+    color: brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    display: flex;
+    width: 11rem;
+    height: 11rem;
+}

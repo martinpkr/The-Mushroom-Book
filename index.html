@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="centered-text">
+        Mushroom Book
+    </h1>
+    <h2 class="centered-text">Find all the mushrooms that you are looking for.</h2>
+    <h4 class="centered-text">This site is my project for helping people(and myself) with finding different kind of mushrooms by their properties and charachteristics</h4>
+    <div id="buttons">
+    <button class="searchButton">Search By Name</button>
+    <button class="searchButton">Search By Color</button>
+</div>
+<span id="input-field">
+    <form action="">
+        <label for="mushName" id="label-text">Mushroom Name:</label>
+        <input type="text" id="mushroomName" name="mushroomName">
+    </form>
+    <button type="submit" id="submit-btn">Submit</button>
+</span>
+<div id="img"></div>
+<p id="not-found">There is no such mushroom</p>
+
+<script src="script.js"></script>
+<script>
+    window.onload = onLoad();
+</script>
+</body>
+</html>
