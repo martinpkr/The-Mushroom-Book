@@ -44,8 +44,10 @@ h1{
 
 #label-text{
     font-size: xx-large;
+    padding: 10px;
     color: greenyellow;
-    border: .2rem solid;
+    border: .4rem solid;
+    border-radius: 80px;
     background-color: rosybrown;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: clamp(200px, 50%, 600px);
@@ -62,6 +64,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 #not-found{
     font-size: larger;
@@ -74,6 +77,46 @@ h1{
 }
 img{
     display: flex;
+    border-radius: 80px;
     width: 11rem;
     height: 11rem;
+    border: pink solid 5px;
+}
+#habitat{
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+    font-weight: 700;
+    font-size: larger;
+    border: pink solid 5px;
+    background-color: white;
+    margin-top: 15px;
+}
+#confused-with{
+    display: none;
+    position: relative;
+    bottom: 10rem;
+    font-size: 24px;
+    color: palevioletred;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#confused-with button{
+    font-size: 30px;
+    color: red;
+    background-color: pink;
+    border-radius: 20px;
+    border: plum solid 4px;
+    margin-right: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#mushrooms{
+    display: inline-block;
+    border: pink solid 2px;
+    position: relative;
+    top: 62px;
+    right: 230px;
 }
