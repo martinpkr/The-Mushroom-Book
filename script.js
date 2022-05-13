@@ -3,8 +3,10 @@ function onLoad() {
   let inputField = document.querySelector("#input-field");
   let mushroomName = document.querySelector("#mushroomName");
   let submitButtonElement = document.querySelector("#submit-btn");
-  let confusedWithSpanElement = document.querySelector("#confused-with")
-  let confusedWithButtonElement = document.querySelector("#confused-with button")
+  let confusedWithSpanElement = document.querySelector("#confused-with");
+  let confusedWithButtonElement = document.querySelector(
+    "#confused-with button"
+  );
 
   let [searchByNameButton, searchByColorButton] = buttonElements;
   let paragraph = document.querySelector("#not-found");
@@ -20,40 +22,44 @@ function onLoad() {
     submitButtonElement.addEventListener("click", search);
     function search() {
       let mushroomNameValue = mushroomName.value;
-      if(mushroomNameValue == 0){
-          return
+      if (mushroomNameValue == 0) {
+        return;
       }
-        let imagePlace = document.querySelector("#img");
-        let habitatPlace = document.querySelector("#habitat")
+      let imagePlace = document.querySelector("#img");
+      let habitatPlace = document.querySelector("#habitat");
       for (const key in mushroomObj) {
         let img = document.createElement("img");
-        let habitatParagraph = document.createElement('p')
+        let habitatParagraph = document.createElement("p");
         let latinName = mushroomObj[key].latin;
         let commonNames = mushroomObj[key].common;
         let mushroomImg = mushroomObj[key].img;
-    
-        if (latinName.includes(mushroomNameValue) || commonNames.toString().includes(mushroomNameValue)) {
+
+        if (
+          latinName.includes(mushroomNameValue) ||
+          commonNames.toString().includes(mushroomNameValue)
+        ) {
           img.src = mushroomImg;
           imagePlace.replaceChildren(img);
-          habitatParagraph.textContent = mushroomObj[key].habitat
-          habitatPlace.replaceChildren(habitatParagraph)
+          habitatParagraph.textContent = mushroomObj[key].habitat;
+          habitatPlace.replaceChildren(habitatParagraph);
           imagePlace.style.display = "flex";
           mushroomName.value = "";
           paragraph.style.display = "none";
-          habitatPlace.style.display = 'flex'
-          confusedWithSpanElement.style.display = "inline"
+          habitatPlace.style.display = "inline-block";
+          confusedWithSpanElement.style.display = "inline";
 
-          confusedWithButtonElement.addEventListener('click',showConfusedWith)
+          confusedWithButtonElement.addEventListener("click", showConfusedWith);
 
           function showConfusedWith(e) {
-            let confusedWithMushrooms = mushroomObj[key].confusedWith
-            let muhsroomParagraphs = document.querySelector('#mushrooms')
-            for (const element of confusedWithMushrooms) {
-              
-              let similarMushroom = document.createElement('p')
-              similarMushroom.textContent = element
-              muhsroomParagraphs.replaceChildren(similarMushroom)
-            }
+            let confusedWithMushrooms = mushroomObj[key].confusedWith;
+            let muhsroomParagraphs = document.querySelector("#mushrooms");
+            let similarMushroom = document.createElement("p");
+            similarMushroom.textContent = ''
+            similarMushroom.innerHTML = similarMushroom.textContent + confusedWithMushrooms
+              .toString()
+              .split(",")
+              .join("<br />");
+            muhsroomParagraphs.replaceChildren(similarMushroom);
           }
           break;
         } else {
@@ -62,7 +68,6 @@ function onLoad() {
         }
       }
     }
-
   }
   fetch("mushrooms.json")
     .then(function (resp) {

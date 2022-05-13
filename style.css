@@ -13,6 +13,16 @@ h1{
     font-weight: 400;
     text-shadow: 6px 6px 6px pink;
 }
+h2{
+    position: relative;
+    bottom: 20px;
+    color: palevioletred;
+}
+h4{
+    position: relative;
+    bottom: 20px;
+    color: palevioletred;
+}
 .centered-text{
     display: flex;
     justify-content: center;
@@ -64,6 +74,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     
 }
 #not-found{
@@ -76,7 +87,7 @@ h1{
     align-items: center;
 }
 img{
-    display: flex;
+    display: inline-block;
     border-radius: 80px;
     width: 11rem;
     height: 11rem;
@@ -91,8 +102,14 @@ img{
     font-weight: 700;
     font-size: larger;
     border: pink solid 5px;
+    position:absolute;
+    top: 18.5rem;
+    right: 0;
+    width:400px;
+    max-width: 40%;
+    height: min-content;
     background-color: white;
-    margin-top: 15px;
+
 }
 #confused-with{
     display: none;
@@ -116,7 +133,11 @@ img{
 #mushrooms{
     display: inline-block;
     border: pink solid 2px;
-    position: relative;
-    top: 62px;
-    right: 230px;
+    position:absolute;
+    top: 2rem;
+    right: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: brown;
 }
