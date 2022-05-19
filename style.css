@@ -1,9 +1,12 @@
 html{
+    background-color: chocolate;
+}
+section{
     background: url(img/backround.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    height: 40rem;
 }
 h1{
     font-size: 40px;
@@ -14,14 +17,20 @@ h1{
     text-shadow: 6px 6px 6px pink;
 }
 h2{
-    position: relative;
+    position: flex;
     bottom: 20px;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
     color: palevioletred;
 }
 h4{
     position: relative;
     bottom: 20px;
     color: palevioletred;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 .centered-text{
     display: flex;
@@ -43,6 +52,7 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 #input-field{
     display: none;
@@ -103,8 +113,9 @@ img{
     font-size: larger;
     border: pink solid 5px;
     position:absolute;
-    top: 18.5rem;
+    bottom: 0;
     right: 0;
+    margin: 20px 8px 0px;
     width:400px;
     max-width: 40%;
     height: min-content;
@@ -140,4 +151,28 @@ img{
     align-items: center;
     text-align: center;
     background-color: brown;
+}
+header{
+    --border-width: 5px
+}
+
+#nav-bar ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap:2rem;
+
+}
+#nav-bar li{
+    list-style-type: none;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: palevioletred;
+    color: pink;
+    border: 2px solid pink;
+    text-align: center;
+    
+
+    
 }
