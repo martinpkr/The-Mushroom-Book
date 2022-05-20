@@ -7,6 +7,7 @@ function onLoad() {
   let confusedWithButtonElement = document.querySelector(
     "#confused-with button"
   );
+  let muhsroomParagraphs = document.querySelector("#mushrooms");
 
   let [searchByNameButton, searchByColorButton] = buttonElements;
   let paragraph = document.querySelector("#not-found");
@@ -52,7 +53,7 @@ function onLoad() {
 
           function showConfusedWith(e) {
             let confusedWithMushrooms = mushroomObj[key].confusedWith;
-            let muhsroomParagraphs = document.querySelector("#mushrooms");
+          
             let similarMushroom = document.createElement("p");
             similarMushroom.textContent = ''
             similarMushroom.innerHTML = similarMushroom.textContent + confusedWithMushrooms

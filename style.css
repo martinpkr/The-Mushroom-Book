@@ -1,12 +1,26 @@
 html{
-    background-color: chocolate;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
 }
+body{
+    margin: 0;
+    padding: 0
+    }
 section{
     background: url(img/backround.jpg);
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center;  
     height: 40rem;
+    overflow: hidden;
+    position: relative;
+    
+    margin: 10px;
+    
 }
 h1{
     font-size: 40px;
@@ -97,26 +111,25 @@ h4{
     align-items: center;
 }
 img{
-    display: inline-block;
-    border-radius: 80px;
+    display: flex;
+    border-radius: 50%;
     width: 11rem;
     height: 11rem;
     border: pink solid 5px;
+    margin-right: 5rem;
 }
 #habitat{
     display: none;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     color: brown;
     font-weight: 700;
     font-size: larger;
     border: pink solid 5px;
     position:absolute;
-    bottom: 0;
     right: 0;
-    margin: 20px 8px 0px;
-    width:400px;
+    bottom: 0;
+    border-radius: 10%;
+    width: 400px;
     max-width: 40%;
     height: min-content;
     background-color: white;
@@ -124,8 +137,9 @@ img{
 }
 #confused-with{
     display: none;
-    position: relative;
-    bottom: 10rem;
+    position:absolute;
+    left: 0;
+    bottom: 0;
     font-size: 24px;
     color: palevioletred;
     font-weight: 700;
@@ -142,14 +156,13 @@ img{
 
 }
 #mushrooms{
-    display: inline-block;
+    display: flex;
     border: pink solid 2px;
-    position:absolute;
-    top: 2rem;
-    right: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    max-width: 100%;
+    border-radius: 15%;
+    position:relative;
+    left: 0;
+    bottom: 0;
     background-color: brown;
 }
 header{
@@ -173,6 +186,35 @@ header{
     border: 2px solid pink;
     text-align: center;
     
+}
+#footer{
+    border: 1px solid black;
+    margin-top: 1rem;
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+text-align: start;
 
+    padding: 5rem;
+}
+#footer > p{
+    color: #302b63;
+    font-size: xx-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: -webkit-linear-gradient(#302b63, #24243e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#start-footer{
+    border: 1px solid black;
+    margin: 0;
+    margin-top: -10px;
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
